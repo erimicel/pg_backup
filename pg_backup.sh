@@ -14,14 +14,6 @@
 #   Default region name [None]: auto
 #   Default output format [None]: json
 
-# R2 ENV CONFIGURATION
-#
-# vim ~/.bashrc => Add the following
-#   export R2_BACKUP_ACCESS_KEY_ID=<access_key_id>
-#   export R2_BACKUP_ACCESS_KEY_SECRET=<access_key_secret>
-#   export R2_BACKUP_BUCKET_NAME=<bucket_name>
-#   export R2_BACKUP_ACCOUNT_ID=<account_id>
-
 # LOAD ENVIRONMENT VARIABLES (in case script is run by cron or non-login shell)
 source ~/.bashrc
 
@@ -37,9 +29,9 @@ DATABASES=(DB1) # add more DB2 DB3 etc
 # BACKUP SETTINGS
 TIMESTAMP=$(date +"%Y-%m-%dT%H:%M:%S")
 BACKUP_DIR="/tmp/pg_backups" # directory to store backups
-R2_BUCKET="${R2_BACKUP_BUCKET_NAME}"
+R2_BUCKET="<bucket_name>"
 # this is the cloudflare R2 endpoint, can be .eu.r2.cloudflarestorage.com
-R2_ENDPOINT="https://${R2_BACKUP_ACCOUNT_ID}.r2.cloudflarestorage.com"
+R2_ENDPOINT="https://<account_id>.r2.cloudflarestorage.com"
 
 mkdir -p "$BACKUP_DIR"
 
