@@ -22,8 +22,8 @@ Enter your Cloudflare R2 Access Key ID, Secret Access Key, default region name (
 
 3. R2 Configuration: Add the R2 credentials and bucket name to your environment variables. Edit your ~/.bashrc and add the following for easy use:
 ```
-export R2_ACCESS_KEY_ID=<access_key_id>
-export R2_ACCESS_KEY_SECRET=<access_key_secret>
+export R2_BACKUP_ACCESS_KEY_ID=<access_key_id>
+export R2_BACKUP_ACCESS_KEY_SECRET=<access_key_secret>
 export R2_BACKUP_BUCKET_NAME=<bucket_name>
 export R2_BACKUP_ACCOUNT_ID=<account_id>
 ```
