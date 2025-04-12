@@ -27,6 +27,7 @@ source ~/.bashrc
 # CONFIGURATION
 declare -A DB1=( ["container"]="db_container_1" ["user"]="db_user_1" ["db"]="db_name_1" )
 declare -A DB2=( ["container"]="db_container_2" ["user"]="db_user_2" ["db"]="db_name_2" )
+# Add more databases / containers
 # declare -A DB3=( ["container"]="db_container_3" ["user"]="db_user_3" ["db"]="db_name_3" )
 
 DATABASES=(DB1 DB2) # add more DB3
@@ -35,7 +36,8 @@ DATABASES=(DB1 DB2) # add more DB3
 TIMESTAMP=$(date +"%Y-%m-%dT%H:%M:%S")
 BACKUP_DIR="/tmp/pg_backups" # directory to store backups
 R2_BUCKET="${R2_BACKUP_BUCKET_NAME}"
-R2_ENDPOINT="https://${R2_BACKUP_ACCOUNT_ID}.eu.r2.cloudflarestorage.com"
+# this is the cloudflare R2 endpoint, can be .eu.r2.cloudflarestorage.com
+R2_ENDPOINT="https://${R2_BACKUP_ACCOUNT_ID}.r2.cloudflarestorage.com"
 
 mkdir -p "$BACKUP_DIR"
 
