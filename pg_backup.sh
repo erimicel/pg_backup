@@ -15,6 +15,7 @@
 #   Default output format [None]: json
 
 # R2 ENV CONFIGURATION
+#
 # vim ~/.bashrc => Add the following
 #   export R2_ACCESS_KEY_ID=<access_key_id>
 #   export R2_ACCESS_KEY_SECRET=<access_key_secret>
@@ -26,11 +27,12 @@ source ~/.bashrc
 
 # CONFIGURATION
 declare -A DB1=( ["container"]="db_container_1" ["user"]="db_user_1" ["db"]="db_name_1" )
-declare -A DB2=( ["container"]="db_container_2" ["user"]="db_user_2" ["db"]="db_name_2" )
+
 # Add more databases / containers
+# declare -A DB2=( ["container"]="db_container_2" ["user"]="db_user_2" ["db"]="db_name_2" )
 # declare -A DB3=( ["container"]="db_container_3" ["user"]="db_user_3" ["db"]="db_name_3" )
 
-DATABASES=(DB1 DB2) # add more DB3
+DATABASES=(DB1) # add more DB2 DB3 etc
 
 # BACKUP SETTINGS
 TIMESTAMP=$(date +"%Y-%m-%dT%H:%M:%S")
